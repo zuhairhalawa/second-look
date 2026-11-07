@@ -145,7 +145,10 @@ function loadPayPal() {
   return paypalReady;
 }
 
+let latestRender = 0;
 async function renderPayPal(row) {
+  latestRender += 1;
+  const thisRender = latestRender;
   const box = $('paypal-button');
   box.replaceChildren();
   const note = $('pay-note');
@@ -157,7 +160,7 @@ async function renderPayPal(row) {
   }
   try {
     const paypal = await loadPayPal();
-    if (selected !== row) return;
+    if (thisRender !== latestRender) return;
     await paypal.Buttons({
       style: { layout: 'horizontal', tagline: false, height: 44, label: 'pay' },
       createOrder: (_d, actions) => actions.order.create({
@@ -176,6 +179,8 @@ async function renderPayPal(row) {
       onError: (err) => { note.textContent = 'PayPal reported a problem, and this payment did not go through.'; console.error(err); },
     }).render(box);
   } catch {
+    // Picking another row removes the button that was still loading. That isn't a failure to report.
+    if (thisRender !== latestRender) return;
     note.textContent = PAYPAL_CLIENT_ID ? 'PayPal checkout couldn’t load. Check your connection and try again.' : 'PayPal checkout isn’t set up yet. Add a sandbox client ID to config.js.';
   }
 }
