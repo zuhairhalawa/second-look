@@ -137,7 +137,7 @@ function loadPayPal() {
   if (!PAYPAL_CLIENT_ID) return Promise.reject(new Error('no client id'));
   paypalReady ||= new Promise((resolve, reject) => {
     const s = document.createElement('script');
-    s.src = `https://www.paypal.com/sdk/js?client-id=${encodeURIComponent(PAYPAL_CLIENT_ID)}&currency=USD&intent=capture`;
+    s.src = `https://www.paypal.com/sdk/js?client-id=${encodeURIComponent(PAYPAL_CLIENT_ID)}&currency=USD&intent=capture&locale=en_US`;
     s.onload = () => resolve(window.paypal);
     s.onerror = () => reject(new Error('PayPal could not load'));
     document.head.append(s);
