@@ -1,0 +1,17 @@
+{
+  "name": "second-look",
+  "version": "1.0.0",
+  "description": "Check a payment request on your own device before you pay it.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "private": "true"
+}

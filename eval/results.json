@@ -1,0 +1,14 @@
+{
+  "note": "Output of eval/index.html. Small, synthetic, English-only sets: treat as a sanity check, not a measured real-world rate.",
+  "model": "Xenova/all-MiniLM-L6-v2 (q8, 23 MB, Apache-2.0)",
+  "threshold": 0.01,
+  "leaveOneOutOnLibrary": { "caught": 30, "scams": 36, "falseAlarms": 4, "normal": 24 },
+  "heldOut": {
+    "rulesOnly": { "caught": 2, "scams": 15, "falseAlarms": 0, "genuine": 15 },
+    "modelOnly": { "caught": 11, "scams": 15, "falseAlarms": 0, "genuine": 15 },
+    "combined": { "caught": 11, "scams": 15, "falseAlarms": 0, "genuine": 15 }
+  },
+  "levels": { "scams": { "stop": 10, "look": 1, "clear": 4 }, "genuine": { "stop": 0, "look": 0, "clear": 15 } },
+  "msPerMessage": 14,
+  "missed": ["overpayment to a mover", "tax refund release charge", "apartment holding deposit", "car warranty"]
+}

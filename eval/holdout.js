@@ -1,0 +1,36 @@
+// Held-out synthetic set. Never use these to choose labels or thresholds.
+export const scams = [
+  "Hey, I'm your new roommate's cousin. He asked me to collect the deposit since he's overseas. Just send the $600 to me and he'll give you the keys when he's back.",
+  "Your computer has reported a problem to us. A technician can fix it remotely for $199, payable right now, otherwise your files may be lost by this evening.",
+  "I'm a nurse stationed abroad and I want to buy your sofa. I'll send more than the asking price, then you can forward the extra to my mover.",
+  "Your tax refund of $812 is ready. To receive it, first pay the $19 release charge using the form in this message.",
+  "Sorry to bother you, it's your son with a new number. My old phone broke and I can't get into my bank. Can you cover a $480 bill for me today? I'll pay you back at the weekend.",
+  "We are hiring remote assistants at $400 a week. We'll send you a cheque; deposit it, keep your wage, and send the rest to our supplier.",
+  "Only two apartments left at this price. Pay the $700 holding deposit today and I'll post you the keys. I can't show you around because I've moved to another city.",
+  "Your account will be closed within 24 hours because of unusual activity. Confirm your identity by paying the $1 verification charge here.",
+  "You're owed a refund from your energy company. We just need you to log in through this page and approve a small test payment.",
+  "I'm a crypto mentor. Put in $300 this week and I'll personally double it by Friday. My students all made money, and spots are limited.",
+  "Hi, this is Mark from finance. The boss needs gift vouchers for a client before noon and he's unreachable. Buy them on your card and send me the codes; you'll be reimbursed.",
+  "Your car's extended warranty has lapsed. Pay $89 by tonight to avoid losing coverage. Do not hang up or your offer will be cancelled.",
+  "A lawyer here. A distant relative left you $2 million, and I only need $350 for the transfer paperwork to release it to you.",
+  "Hi, I sent you $200 by accident, it was meant for my sister. Could you please send it back to this other account? It's urgent, she needs it for hospital bills.",
+  "I run a rescue shelter and we'll close tomorrow without help. Send your donation by gift to my own account, because the shelter's account is frozen right now.",
+];
+
+export const legit = [
+  "Hi Ana, your balance for the kitchen repaint is $640, as quoted. You can pay by bank transfer or card, whichever suits you. Thanks!",
+  "Reminder: your dental check-up on the 9th has a $20 co-pay, payable at reception on the day.",
+  "Your invoice from the design studio is ready: $1,250 for the October retainer, due by the end of the month. The contract reference is on the invoice.",
+  "It was great seeing you! You covered the taxi last time, so I've sent you my half of the concert tickets, $45.",
+  "Our book club is collecting $10 each for the host's gift. Bring cash on Thursday or pay Lena whenever you see her.",
+  "Your order has shipped. The total of $64.20 was charged to your card ending in 4411. Track it from your orders page.",
+  "Your car insurance renews on June 1 at $412 a year. Your policy documents are in your online account. Call the number on your card with any questions.",
+  "Hi, here's the quote for the fence repair: $380 including materials. I only take payment after the work is done and you've checked it.",
+  "The office coffee fund is $5 this month. Pop it in the jar in the kitchen whenever you're passing.",
+  "Your library fine is $2.40. You can pay at any branch or online through your library account.",
+  "Thanks for renting the cabin. As agreed, the $150 deposit will be returned within a week of your stay, once we've checked the place.",
+  "Tuition for the spring term is $3,200, due January 15. Payment options are on the university's student portal, and the bursar's office can help with plans.",
+  "Hey, the group gift for Omar came to $18 each. No pressure if you're short this month, just tell me.",
+  "Your phone bill of $31.50 will be charged on the 12th to your saved card. No action is needed.",
+  "I've finished the translation you asked for. As we agreed, it's $120. My invoice is attached, and net 30 is fine.",
+];
