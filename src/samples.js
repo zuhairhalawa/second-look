@@ -30,6 +30,10 @@ export const SAMPLES = [
     text: 'The electrician came on Tuesday and it cost $120 for the flat. I covered it, so you owe me $60. The receipt is on the fridge.',
   },
   {
+    id: 'sample-giftcard', from: 'Priya, manager', amount: 200,
+    text: 'Are you at your desk? I am stuck in a meeting and need you to buy $200 in gift cards for a client right now. Send me the codes and keep this between us.',
+  },
+  {
     id: 'sample-supplier', from: 'Northline Supplies', amount: 2875,
     text: 'Accounts here. We have changed banks, so please use the details below for invoice 4471 of $2,875 and for all future payments. Our manager needs this settled today.',
   },

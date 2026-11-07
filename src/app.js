@@ -81,10 +81,10 @@ const gridApi = window.agGrid.createGrid($('grid'), {
       valueGetter: ({ data }) => (data.isTotals ? '' : resultOf(data).label),
       comparator: (a, b, nodeA, nodeB) => LEVEL_ORDER[resultOf(nodeA.data).level] - LEVEL_ORDER[resultOf(nodeB.data).level],
     },
-    { headerName: 'From', field: 'from', width: 170, tooltipField: 'from' },
+    { headerName: 'From', field: 'from', width: 190, tooltipField: 'from' },
     { headerName: 'Request', field: 'text', flex: 1, minWidth: 120, tooltipField: 'text', colSpan: ({ data }) => (data?.isTotals ? 3 : 1) },
     {
-      headerName: 'Amount', field: 'amount', width: 104, type: 'rightAligned',
+      headerName: 'Amount', field: 'amount', width: 118, type: 'rightAligned',
       valueFormatter: ({ value, data }) => (data?.isTotals ? '' : money(value)),
       cellStyle: { fontVariantNumeric: 'tabular-nums' },
     },
@@ -166,6 +166,7 @@ async function renderPayPal(row) {
       createOrder: (_d, actions) => actions.order.create({
         intent: 'CAPTURE',
         purchase_units: [{ amount: { value: Number(row.amount).toFixed(2), currency_code: 'USD' }, description: 'Second Look sandbox demo payment' }],
+        application_context: { shipping_preference: 'NO_SHIPPING' },
       }),
       onApprove: async (data, actions) => {
         const capture = readCapture(await captureOrder(data, actions));
