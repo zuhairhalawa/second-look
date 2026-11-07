@@ -62,8 +62,8 @@ export function parseAmount(text) {
 }
 
 // How much friction stands between the person and the PayPal button.
-export function canPay(level, { checked = false, typedAmount = '', amount = 0, checking = false } = {}) {
-  if (checking) return false;
+export function canPay(level, { checked = false, typedAmount = '', amount = 0, checking = false, held = false } = {}) {
+  if (checking || held) return false;
   if (level === 'clear') return true;
   if (level === 'look') return checked;
   return checked && String(typedAmount).trim() !== '' && Number(amount) > 0 && Number(typedAmount) === Number(amount);

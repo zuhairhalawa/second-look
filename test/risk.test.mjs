@@ -79,6 +79,11 @@ test('nothing can be paid while the check is still running', () => {
   assert.equal(canPay('stop', { checking: true, checked: true, typedAmount: '150', amount: 150 }), false);
 });
 
+test('a held payment cannot be paid until it is moved back to review', () => {
+  assert.equal(canPay('clear', { held: true }), false);
+  assert.equal(canPay('stop', { held: true, checked: true, typedAmount: '150', amount: 150 }), false);
+});
+
 test('payment gates depend on the level', () => {
   assert.equal(canPay('clear', {}), true);
   assert.equal(canPay('look', {}), false);

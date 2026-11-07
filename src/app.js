@@ -189,11 +189,12 @@ function applyGate(row) {
   const { level } = resultOf(row);
   const paid = isPaidOrPending(row);
   const checking = row.checking && aiState !== 'off';
+  const held = row.status === 'Held';
   $('pay-wait').hidden = !checking || paid;
-  $('gate').hidden = paid || level === 'clear' || checking;
+  $('gate').hidden = paid || level === 'clear' || checking || held;
   $('gate-check').hidden = level === 'clear';
   $('gate-type').hidden = level !== 'stop';
-  const open = !paid && canPay(level, { checked: $('checked').checked, typedAmount: $('typed').value, amount: row.amount, checking });
+  const open = !paid && canPay(level, { checked: $('checked').checked, typedAmount: $('typed').value, amount: row.amount, checking, held });
   $('paypal-button').classList.toggle('is-locked', !open);
   $('hold').hidden = paid;
   $('hold').classList.toggle('quiet', !checking && level === 'clear' && row.status !== 'Held');
