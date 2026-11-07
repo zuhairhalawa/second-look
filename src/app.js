@@ -84,7 +84,7 @@ const gridApi = window.agGrid.createGrid($('grid'), {
     { headerName: 'From', field: 'from', width: 190, tooltipField: 'from' },
     { headerName: 'Request', field: 'text', flex: 1, minWidth: 120, tooltipField: 'text', colSpan: ({ data }) => (data?.isTotals ? 3 : 1) },
     {
-      headerName: 'Amount', field: 'amount', width: 118, type: 'rightAligned',
+      headerName: 'Amount', field: 'amount', width: 132, type: 'rightAligned',
       valueFormatter: ({ value, data }) => (data?.isTotals ? '' : money(value)),
       cellStyle: { fontVariantNumeric: 'tabular-nums' },
     },
